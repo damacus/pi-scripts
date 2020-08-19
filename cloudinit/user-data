@@ -1,0 +1,19 @@
+#cloud-config
+
+chpasswd:
+  expire: true
+  list:
+    - ubuntu:ubuntu
+ssh_pwauth: false
+ntp:
+  enabled: true
+  config:
+    service_name: systemd-timesyncd
+apt_update: true
+packages: [nfs-common]
+apt_upgrade: true
+apt_reboot_if_required: true
+hostname: "red-pi"
+ssh_import_id: ["gh:damacus"]
+rsyslog:
+  - "*.*  @192.168.0.35:514"

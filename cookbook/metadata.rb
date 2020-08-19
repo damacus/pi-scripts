@@ -1,0 +1,12 @@
+name 'chef_pi'
+maintainer 'Dan Webb'
+maintainer_email 'dan@webb-agile-solutons.ltd'
+license 'Apache-2.0'
+description 'Installs/Configures chef_pi'
+version '0.1.0'
+chef_version '>= 16'
+issues_url 'https://github.com/damacus/pi-scripts/issues'
+source_url 'https://github.com/damacus/pi-scripts'
+
+depends 'line'
+depends 'hostname'
